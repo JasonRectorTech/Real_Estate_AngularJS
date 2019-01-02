@@ -1,0 +1,79 @@
+<div class="map-filter-container">
+    <ion-scroll class="filter-scroll-container">
+        <div class="card filter-title">SQFT
+            <div class="row">
+                <input class="col col-33 inputbox-mod" placeholder="1000" type="number" name="minSqft" ng-model="vm.minSqft">
+                <div class="col col-10 sqft-dash">_</div>
+                <input class="col col-33 inputbox-mod" placeholder="2000" type="number" name="maxSqft" ng-model="vm.maxSqft">
+            </div>
+        </div>
+        <div class="card" ng-class="vm.isForsaleDropdown ? 'forsaleDropdownContainerFull' : 'forsaleDropdownContainerSmall'">
+            <i class="icon ion-android-arrow-dropdown for-sale-dropdown"></i>
+            <div class="filter-title" ng-click="vm.isForsaleDropdown = !vm.isForsaleDropdown">For Sale</div>
+            <div ng-show="vm.isForsaleDropdown === true">
+                <div class="price-sqft-for-sale">Price per SQFT
+                    <div class="row">
+                        <input class="col col-33 inputbox-mod" placeholder="75" type="number" name="minPriceSqft" ng-model="vm.minPriceSqft">
+                        <div class="col col-10 sqft-dash">_</div>
+                        <input class="col col-33 inputbox-mod" placeholder="85" type="number" name="maxPriceSqft" ng-model="vm.maxPriceSqft">
+                    </div>
+                </div>
+                <ion-checkbox ng-repeat="(item, enabled) in vm.forsaleDropdown"
+                    ng-model="vm.forsaleDropdown[item]"> {{ item }}
+                </ion-checkbox>
+            </div>
+        </div>
+        <div class="card">
+            <div class="filter-title">Rental</div>
+            <div class="button-bar">
+                <div ng-class="vm.rentalStatus[item] === true ? 'filterBtnSelected' : 'filterBtnNotSelected'"
+                   class="custom-radio-btn" ng-repeat="(item, enabled) in vm.rentalStatus track by $index"
+                    ng-model="vm.rentalStatus[item]" ng-click="vm.rentalSelected(item)"> {{ item }}
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="filter-title">Beds</div>
+            <div ng-show="!vm.isBedsExact" class="button-bar">
+                <div ng-class="vm.bedQtySelection[item] === true ? 'filterBtnSelected' : 'filterBtnNotSelected'"
+                   class="custom-radio-btn" ng-repeat="(item, enabled) in vm.bedQtySelection track by $index"
+                    ng-model="vm.bedQtySelection[item]" ng-click="vm.bedSelected(item)"> {{ item }}
+                </div>
+            </div>
+            <div ng-show="vm.isBedsExact" class="row">
+                <input class="col col-33 inputbox-mod" placeholder="2" type="tel" name="bedQty" ng-model="vm.bedQty">
+                <div class="col col-33"></div>
+                <button ng-click="vm.isBedsExact = !vm.isBedsExact" class="col col-33">Not Exact</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="filter-title">Baths</div>
+            <div ng-show="!vm.isBathsExact" class="button-bar">
+                <div ng-class="vm.bathQtySelection[item] === true ? 'filterBtnSelected' : 'filterBtnNotSelected'"
+                   class="custom-radio-btn" ng-repeat="(item, enabled) in vm.bathQtySelection track by $index"
+                    ng-model="vm.bathQtySelection[item]" ng-click="vm.bathSelected(item)"> {{ item }}
+                </div>
+            </div>
+            <div ng-show="vm.isBathsExact" class="row">
+                <input class="col col-33 inputbox-mod" placeholder="2" type="tel" name="bathQty" ng-model="vm.bathQty">
+                <div class="col col-33"></div>
+                <button ng-click="vm.isBathsExact = !vm.isBathsExact" class="col col-33">Not Exact</button>
+            </div>
+        </div>
+    </ion-scroll>
+    <div class="filter-container">
+        <div class="button button-clear cancel-filter-btn" ng-click="vm.cancelSelected()">Cancel</div>
+        <div class="button button-clear filter-btn" ng-click="vm.filterSelected()">Filter</div>
+    </div>
+
+</div>
+
+
+<!--
+<div class="col col-33 storage-capacity">
+    <div class="dropdownMod"><bBeds:</b></div>
+    <select name="beds" ng-model="vm.beds" ng-init="vm.beds">
+        <option ng-repeat="option in vm.beds" value="{{option}}">{{option}}</option>
+    </select>
+</div>
+-->

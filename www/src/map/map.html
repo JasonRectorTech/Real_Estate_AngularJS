@@ -1,0 +1,9 @@
+<ion-view view-title="Real Estate Maps" class="starting-background">
+    <ion-nav-buttons side="right">
+        <!-- <button id="filterBtn" class="button button-clear button-icon ion-funnel nav-icon-color" ng-click="$root.isFilterShown = !$root.isFilterShown"></button> -->
+    </ion-nav-buttons>
+  <ion-content class="map-container">
+      <map-filter ng-show="$root.isFilterShown"></map-filter>
+      <div id="mapid" class="mapid"></div>
+  </ion-content>
+</ion-view>

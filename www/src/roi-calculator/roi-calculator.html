@@ -1,0 +1,62 @@
+<ion-view view-title="Meagan's Calculator" class="starting-background">
+  <ion-content>
+        <!--<div class="row">
+            <div class="card-header"><b>Listing Information</b></div>
+            <div class="edit-info">{{vm.editListingText}}</div>
+        </div>-->
+      <div class="entire-container">
+        <div class="row row-mod">
+            <div class="col">
+                <div class="card card-margin">
+                    <div class="card-title">Purchase Price</div>
+                    <input class="calc-inputbox-mod purchase-price" placeholder="" type="number" step="0.01" name="purchasePrice" ng-model="vm.purchasePrice" ng-click="vm.selectText($event)" ng-change="vm.priceChanged()">
+                </div>
+            </div>
+        </div>
+        <div class="row row-mod">
+            <div class="card col col-50">
+                <div class="card-title">Down Payment %</div>
+                <input class="calc-inputbox-mod down-payment" placeholder="" type="number" step="0.01" name="downPayment" ng-model="vm.downPayment" ng-click="vm.selectText($event)">
+            </div>
+            <div class="card col col-50 card-right">
+                <div class="card-title">Interest Rate</div>
+                <input class="calc-inputbox-mod interest-rate" placeholder="" type="number" step="0.01" name="interestRate" ng-model="vm.interestRate" ng-click="vm.selectText($event)">
+            </div>
+        </div>
+        <div class="row row-mod">
+            <div class="card col col-50">
+                <div class="card-title">Monthly Rental Income</div>
+                <input class="calc-inputbox-mod rental-income" placeholder="" type="number" step="0.01" name="rentalIncome" ng-model="vm.rentalIncome" ng-click="vm.selectText($event)">
+            </div>
+            <div class="card col col-50 card-right">
+                <div class="card-title">Annual Taxes</div>
+                <input class="calc-inputbox-mod taxes" placeholder="" type="number" step="0.01" name="taxes" ng-model="vm.taxes" ng-click="vm.selectText($event)">
+            </div>
+        </div>
+        <div class="row row-mod">
+            <div class="card col col-50">
+                <div class="card-title">Annual Insurance</div>
+                <input class="calc-inputbox-mod insurance" placeholder="" type="number" step="0.01" name="insurance" ng-model="vm.insurance" ng-click="vm.selectText($event)">
+            </div>
+            <div class="card col col-50 card-right">
+                <div class="card-title">Loan Term</div>
+                <input class="calc-inputbox-mod loan-term" placeholder="" type="number" step="0.01" name="loanTerm" ng-model="vm.loanTerm" ng-click="vm.selectText($event)">
+            </div>
+        </div>
+    <div ng-if="vm.isCalculated">
+        <div class="row row-mod">
+            <div class="card col col-50">
+                <div class="card-title">Monthly Cash Flow</div>
+                <input ng-readonly="true" class="calc-inputbox-mod ready-only-mod cash-flow" placeholder="" name="cashFlow" ng-model="vm.cashFlow">
+            </div>
+            <div class="card col col-50 card-right">
+                <div class="card-title">Cash on Cash Return</div>
+                <input ng-readonly="true" class="calc-inputbox-mod ready-only-mod cash-return" placeholder="" name="cashReturn" ng-model="vm.cashReturn">
+            </div>
+        </div>
+    </div>
+          
+          </div>
+  </ion-content>
+    <div class="button button-clear button calc-btn" ng-click="vm.calcClicked()">Calculate</div>
+</ion-view>

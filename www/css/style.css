@@ -1,0 +1,263 @@
+/* Empty. Add your own CSS if you like */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+
+a:visited {
+  color: blue;
+}
+
+.nav-bar-block, .bar {
+  background-color: white! important;
+}
+
+.bar.bar-positive .title {
+    color: dimgray !important;
+}
+
+.button-bar > .button {
+    padding: 0px;
+}
+
+.nav-icon-color {
+    color: gray !important;
+}
+
+.ion-funnel:before{
+    font-size: 1.5em !important;
+}
+
+.row {
+    padding: 0px;
+}
+
+.col {
+    padding: 0px;
+}
+
+.card {
+    margin: 0px;
+    margin-top: 12px;
+    min-width: 10em;
+    padding-left: 10px;
+}
+
+.starting-background {
+    background-color: #E7DDD3 !important;
+}
+
+.map-container .scroll {
+  height: 100%;
+}
+
+.mapid {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/****** Filter *******/
+.map-filter-container {
+    position: absolute;
+    z-index: 10000;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.filter-scroll-container {
+    height: 92%;
+}
+
+.inputbox-mod {
+	width: 100%;
+	border: 1px solid !important;
+    text-align: center;
+}
+
+.sqft-dash {
+    margin-left: 10%;
+}
+
+.filter-title {
+    font-weight: bold;
+    padding-bottom: 2em;
+}
+
+.forsaleDropdownContainerSmall {
+    height: 3em;
+}
+
+.forsaleDropdownContainerFull {
+    height: initial;
+}
+
+.rentalDropdownContainerSmall {
+    height: 3em;
+}
+
+.rentalDropdownContainerFull {
+    height: initial;
+}
+
+.for-sale-dropdown {
+    font-size: 1.5em;
+    float: right;
+    margin-right: .5em;
+}
+
+.filterBtnNotSelected {
+    background-color: rgb(248, 248, 248);
+    color: rgb(68, 68, 68);
+    border: 1px solid;
+}
+
+.filterBtnSelected {
+    border-color: #b2b2b2 !important;
+    background-color: brown !important;
+    color: white !important;
+}
+
+.filterBtnSelected button.activated {
+    background-color: black !important;
+    color: white !important;
+}
+
+.custom-radio-btn {
+    border: 1px solid;
+    background-color: rgb(248, 248, 248);
+    color: rgb(68, 68, 68);
+    height: 3em;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+	transform: 			translateY(-50%);
+    font-size: 16px;
+    line-height: 42px;
+}
+
+.price-sqft-for-sale {
+    margin-bottom: 1em;
+}
+
+
+/****** Filter Footer *******/
+.filter-container {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: brown;
+}
+
+.cancel-filter-btn {
+    color: black;
+    margin-left: .5em;
+}
+
+.filter-btn {
+    position: absolute;
+    right: 0;
+    margin-right: .5em;
+    color: black;
+}
+
+/* Removes Plus and Minus zoom and need help */
+.gmnoprint, gm-style-cc {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/***** Property Calculator ******/
+/* Empty. Add your own CSS if you like */
+.entire-container {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.row {
+    padding: 0px;
+}
+
+.col {
+    padding: 0px;
+}
+
+.card {
+    margin: 0px;
+    margin-top: 12px;
+    min-width: 10em;
+    padding-left: 10px;
+}
+
+.starting-background {
+    background-color: #E7DDD3 !important;
+}
+
+.row-mod {
+    position: relative;
+}
+
+.calc-btn {
+    position: absolute;
+    display: block;
+    width: 90%;
+    bottom: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: .5em;
+	background-color: green !important;
+	color: #FFFFFF !important;
+	text-align: center;
+}
+
+.calc-inputbox-mod {
+    color: green !important;
+    font-weight: bold;
+    font-size: 3em !important;
+    height: 100% !important;
+}
+
+.col-right {
+    position: absolute;
+    right: 0;
+}
+
+.calc-btn.activated {
+    background-color: darkgreen !important;
+    opacity: 1;
+}
+
+.card-title {
+    font-size: .8em;
+}
+
+.card-right {
+    margin-left: 8px;
+}
+
+.ready-only-mod {
+    border: 0;
+    background-color: transparent;
+}
+
+.dollar {
+    color: green !important;
+    font-weight: bold;
+    font-size: 3em !important;
+}
